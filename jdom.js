@@ -16,7 +16,7 @@ console.log(fName)
   let text =document.createTextNode('iuyrt')
   node.appendChild(text)
   eklemeli.appendChild(node)*/
-
+/*
   adiniz.value ='kemal'
   const val =adiniz.value
   console.log(val)
@@ -57,3 +57,17 @@ let jobList = document.getElementById('pos')
 for (let i =0 ; i<positionDiv.length; i++){
     jobList.innerHTML+=`<option>${positionDiv[i]}</option>`
 }
+
+// yakalamak girilen burseyi key up bastikca ratan
+
+const lastName =document.getElementById('adiniz')
+const charCo = document.getElementById('saymak')
+
+const showRemaninChar = () => {
+const val =lastName.value
+charCo.innerText = val.length +'/40'
+
+}
+
+
+lastName.addEventListener('keyup',showRemaninChar)
